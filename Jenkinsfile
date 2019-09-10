@@ -14,7 +14,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven3.5.0') {
+                withMaven(maven : 'maven3.5.3') {
                     sh 'mvn test'
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
 
         stage ('install Stage') {
             steps {
-                withMaven(maven : 'maven3.3.1') {
+                withMaven(maven : 'maven3.3.3') {
                     sh 'mvn install'
                 }
             }
